@@ -32,8 +32,7 @@ struct CalendarView: View {
             let date: DatePicker = DatePicker(selection: $selectedDate, displayedComponents: [.date], label: {
                 Text("")
             })
-            date.datePickerStyle(.graphical)
-            date.labelsHidden()
+              date.datePickerStyle(.graphical)
             
             
             
