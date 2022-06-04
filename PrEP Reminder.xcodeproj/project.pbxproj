@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2DB087DE284BB38D001E2662 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087DD284BB38D001E2662 /* CalendarView.swift */; };
+		2DB087E1284BD791001E2662 /* ContentViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E0284BD791001E2662 /* ContentViewMod.swift */; };
+		2DB087E3284BD7A6001E2662 /* HomeViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E2284BD7A6001E2662 /* HomeViewMod.swift */; };
+		2DB087E5284BDD58001E2662 /* HasLogged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E4284BDD58001E2662 /* HasLogged.swift */; };
+		2DB087E7284BE3DB001E2662 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E6284BE3DB001E2662 /* File.swift */; };
 		38C6A720284B903500FC3443 /* PrEP_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A71F284B903500FC3443 /* PrEP_ReminderApp.swift */; };
 		38C6A722284B903500FC3443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A721284B903500FC3443 /* ContentView.swift */; };
 		38C6A724284B903700FC3443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C6A723284B903700FC3443 /* Assets.xcassets */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		2DB087DD284BB38D001E2662 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		2DB087E0284BD791001E2662 /* ContentViewMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewMod.swift; sourceTree = "<group>"; };
+		2DB087E2284BD7A6001E2662 /* HomeViewMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewMod.swift; sourceTree = "<group>"; };
+		2DB087E4284BDD58001E2662 /* HasLogged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasLogged.swift; sourceTree = "<group>"; };
+		2DB087E6284BE3DB001E2662 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = "Rikhil's changes (working)/File.swift"; sourceTree = SOURCE_ROOT; };
 		38C6A71C284B903500FC3443 /* PrEP Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PrEP Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C6A71F284B903500FC3443 /* PrEP_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrEP_ReminderApp.swift; sourceTree = "<group>"; };
 		38C6A721284B903500FC3443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -83,14 +91,26 @@
 			isa = PBXGroup;
 			children = (
 				2DB087DD284BB38D001E2662 /* CalendarView.swift */,
+				2DB087E6284BE3DB001E2662 /* File.swift */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2DB087DF284BD76F001E2662 /* Rikhil's changes (working) */ = {
+			isa = PBXGroup;
+			children = (
+				2DB087E0284BD791001E2662 /* ContentViewMod.swift */,
+				2DB087E2284BD7A6001E2662 /* HomeViewMod.swift */,
+				2DB087DC284BB368001E2662 /* Calendar */,
+				2DB087E4284BDD58001E2662 /* HasLogged.swift */,
+			);
+			path = "Rikhil's changes (working)";
 			sourceTree = "<group>";
 		};
 		38C6A713284B903500FC3443 = {
 			isa = PBXGroup;
 			children = (
-				2DB087DC284BB368001E2662 /* Calendar */,
+				2DB087DF284BD76F001E2662 /* Rikhil's changes (working) */,
 				38C6A71E284B903500FC3443 /* PrEP Reminder */,
 				38C6A72F284B903700FC3443 /* PrEP ReminderTests */,
 				38C6A739284B903700FC3443 /* PrEP ReminderUITests */,
@@ -278,7 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				38C6A74E284BB50900FC3443 /* UserClass.swift in Sources */,
+				2DB087E5284BDD58001E2662 /* HasLogged.swift in Sources */,
+				2DB087E3284BD7A6001E2662 /* HomeViewMod.swift in Sources */,
 				2DB087DE284BB38D001E2662 /* CalendarView.swift in Sources */,
+				2DB087E1284BD791001E2662 /* ContentViewMod.swift in Sources */,
+				2DB087E7284BE3DB001E2662 /* File.swift in Sources */,
 				38C6A722284B903500FC3443 /* ContentView.swift in Sources */,
 				38C6A720284B903500FC3443 /* PrEP_ReminderApp.swift in Sources */,
 				38C6A74C284B99FA00FC3443 /* SettingsView.swift in Sources */,
