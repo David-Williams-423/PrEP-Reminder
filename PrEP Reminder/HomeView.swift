@@ -44,6 +44,7 @@ struct HomeView: View {
                         .font(.system(size: 25, weight: .bold))
                         .foregroundColor(.white)
                 }
+                .padding(.bottom)
 
             }
         }
