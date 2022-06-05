@@ -23,6 +23,7 @@
 		38C6A74A284B990400FC3443 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A749284B990400FC3443 /* HomeView.swift */; };
 		38C6A74C284B99FA00FC3443 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A74B284B99FA00FC3443 /* SettingsView.swift */; };
 		38C6A74E284BB50900FC3443 /* UserClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A74D284BB50900FC3443 /* UserClass.swift */; };
+		38EF30FE284C3CFA003EFBC9 /* CustomCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EF30FD284C3CFA003EFBC9 /* CustomCalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		38C6A749284B990400FC3443 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		38C6A74B284B99FA00FC3443 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		38C6A74D284BB50900FC3443 /* UserClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserClass.swift; sourceTree = "<group>"; };
+		38EF30FD284C3CFA003EFBC9 /* CustomCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				38C6A74B284B99FA00FC3443 /* SettingsView.swift */,
 				38C6A74D284BB50900FC3443 /* UserClass.swift */,
 				38C6A723284B903700FC3443 /* Assets.xcassets */,
+				38EF30FF284C4172003EFBC9 /* Calendar */,
 				38C6A725284B903700FC3443 /* Preview Content */,
 			);
 			path = "PrEP Reminder";
@@ -170,6 +173,14 @@
 				38C6A73C284B903700FC3443 /* PrEP_ReminderUITestsLaunchTests.swift */,
 			);
 			path = "PrEP ReminderUITests";
+			sourceTree = "<group>";
+		};
+		38EF30FF284C4172003EFBC9 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				38EF30FD284C3CFA003EFBC9 /* CustomCalendarView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +324,7 @@
 				38C6A720284B903500FC3443 /* PrEP_ReminderApp.swift in Sources */,
 				38C6A74C284B99FA00FC3443 /* SettingsView.swift in Sources */,
 				38C6A74A284B990400FC3443 /* HomeView.swift in Sources */,
+				38EF30FE284C3CFA003EFBC9 /* CustomCalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

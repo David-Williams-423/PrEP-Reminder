@@ -16,8 +16,38 @@ class User {
     var reminderTime: Date
     
     init() {
-        self.startDate = .now
+        self.startDate = .now.startOfDay
         self.reminderTime = .now
+    }
+    
+    func logDate(date: Date) -> Bool {
+        
+        if !daysTaken.contains(date.startOfDay) {
+            daysTaken.append(date)
+            return true
+        }
+        
+        return false
+        
+    }
+    
+}
+
+extension Date {
+    
+    var midNight: Date {
+            Calendar.current.date(
+            bySettingHour: 00,
+            minute: 0,
+            second: 0,
+            of: self)!
+        }
+    
+    var startOfDay: Date {
+        return Calendar.current.date(
+        byAdding: .day,
+        value: 0,
+        to: midNight)!
     }
     
 }

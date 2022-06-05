@@ -11,40 +11,54 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack {
+                
                 HStack {
-                    Text("Saturday, June 4")
-                        .font(.system(size: 40, weight: .bold))
-                              + Text("th")
-                                  .font(.system(size: 22.0))
-                                  .baselineOffset(16.0)
+                    Image("Logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
 
                 }.padding()
 
 
-                Spacer()
+                
 
-                VStack(spacing: 15) {
-                    Text("Streak: 40")
+                VStack(spacing: 5) {
+                    
+                        
+                    
+                        
+                    CustomCalendarView()
+                    
+                    HStack(spacing: 4) {
+                        Image(systemName: "heart.fill")
+                        Image(systemName: "heart.fill")
+                        Image(systemName: "heart.fill")
+                        Image(systemName: "heart")
+                        Image(systemName: "heart")
+                        Image(systemName: "heart")
+                        Image(systemName: "heart")
+                    }.foregroundColor(Color("Prep Purple"))
                         .font(.system(size: 40))
-
-                    Image(systemName: "calendar")
-                        .resizable()
-                        .frame(width: 300, height: 300)
+                        
                 }
+                .padding(.vertical, 50)
 
 
-                Spacer()
+                
 
                 ZStack {
                     Rectangle()
                         .frame(width: 250, height: 75)
-                        .cornerRadius(20)
-                        .foregroundColor(.green)
+                        .cornerRadius(30)
+                        .foregroundColor(Color("Prep Blue"))
+                        .shadow(radius: 5)
                     Text("Log")
                         .font(.system(size: 25, weight: .bold))
                         .foregroundColor(.white)
                 }
-                .padding(.bottom)
+                .padding(.top)
+                
+                Spacer()
 
             }
         }
