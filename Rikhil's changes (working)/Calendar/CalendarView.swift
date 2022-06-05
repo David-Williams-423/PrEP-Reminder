@@ -47,7 +47,6 @@ struct CalendarView: View {
             
             ZStack {
                 Button("Log") {
-                    x = (msg.messageGenerator(calendar: vm))
                     let action: buttonClick = buttonClick()
                     action.log(date: vm)
                     x = (msg.messageGenerator(calendar: vm))

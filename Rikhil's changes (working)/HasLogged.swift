@@ -6,11 +6,12 @@
 //
 
 import SwiftUI
-var currentDate: Date = .now
-var logCheck: HasLogged = HasLogged()
-public var hasLogged = logCheck.logger(date: currentDate)
+//public var currentDate: Date = .now
+//public var logCheck: HasLogged = HasLogged()
+//public var hasLogged = logCheck.logger(date: currentDate)
+public var hasLogged = false
 
-struct HasLogged {
+public struct HasLogged {
     
     
     func logger(date: Date) -> Bool {

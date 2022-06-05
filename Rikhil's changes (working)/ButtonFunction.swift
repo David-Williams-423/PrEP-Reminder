@@ -29,9 +29,9 @@ struct buttonClick {
         }
     }
     
-    func streakCounter(date: String) {
-        let dateDay: String = String(date[8]) + String(date[9])
-        let dateDayInt: Int = Int(dateDay)!
+//    func streakCounter(date: String) {
+//        let dateDay: String = String(date[8]) + String(date[9])
+//        let dateDayInt: Int = Int(dateDay)!
 //        for item in logged {
 //            let it
 //    }
@@ -55,5 +55,5 @@ struct buttonClick {
 //        }
             
     }
-}
+//}
 
