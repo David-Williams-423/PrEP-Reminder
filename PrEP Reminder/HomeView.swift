@@ -84,15 +84,13 @@ struct HomeView: View {
 
                 VStack(spacing: 5) {
                     
-                        
                     CustomCalendarView(user: user)
-                    
                     
                     HStack(spacing: 4) {
                         Image(systemName: "heart.fill")
                         Image(systemName: "heart.fill")
                         Image(systemName: "heart.fill")
-                        Image(systemName: "heart.fill")
+                        Image(systemName: user.daysTaken.contains(5) ? "heart.fill" : "heart")
                         Image(systemName: "heart")
                         Image(systemName: "heart")
                         Image(systemName: "heart")

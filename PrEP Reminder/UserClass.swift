@@ -19,7 +19,7 @@ class User: ObservableObject {
     
     init() {
         self.startDate = .now.startOfDay
-        self.reminderTime = .now.addingTimeInterval(100)
+        self.reminderTime = .now.addingTimeInterval(1)
         
     }
     
