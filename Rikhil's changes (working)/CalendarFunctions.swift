@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  CalendarFunctions.swift
 //  PrEP Reminder
 //
 //  Created by Rikhil Fellner on 6/4/22.
@@ -10,11 +10,12 @@ import Foundation
 
 // functions used to determine if the current date is selected and which message to show
 
+public var today: Bool = true
 
 struct todayCheck {
 
     func isItToday(object: CalendarViewModel) -> Bool {
-    var today: Bool
+    
         let currentDate: Date = .now
         if currentDate.description.dropLast(15) == object.selectedDate.description.dropLast(15) {
         today = true

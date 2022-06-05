@@ -16,9 +16,6 @@ struct HomeViewMod: View {
                 HStack {
                     Text(currentDate, style:.date)
                         .font(.system(size: 40, weight: .bold))
-                              + Text("th")
-                                  .font(.system(size: 22.0))
-                                  .baselineOffset(16.0)
 
                 }.padding()
 

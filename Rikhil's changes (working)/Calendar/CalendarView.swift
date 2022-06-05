@@ -27,7 +27,7 @@ struct CalendarView: View {
         VStack {
             let checker: todayCheck = todayCheck()
             
-            if checker.isItToday(object: vm) {
+            if checker.isItToday(object: vm) == false {
                 Text(vm.selectedDate, style: .date)
                     .font(.largeTitle)
             }
@@ -35,6 +35,7 @@ struct CalendarView: View {
        
             let msg: message = message()
             Text(msg.messageGenerator(calendar: vm))
+                .font(.headline)
             DatePicker(selection: $vm.selectedDate, displayedComponents: [.date], label: {
                 Text("")
             })
