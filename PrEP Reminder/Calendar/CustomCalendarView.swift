@@ -60,11 +60,11 @@ struct formatDate: View {
                 
         }
         
-        else if day == currentDay {
+        else if day == currentDay && !highlightedDates.contains(day) {
             ZStack {
                 Circle()
                     .strokeBorder(lineWidth: 3)
-                    .foregroundColor(.red)
+                    .foregroundColor(Color("Prep Blue"))
                     .frame(width: 30, height: 30)
                     
                 Text(String(day))
@@ -76,7 +76,7 @@ struct formatDate: View {
         else if highlightedDates.contains(day)  {
             ZStack {
                 Circle()
-                    .foregroundColor(.red)
+                    .foregroundColor(Color("Prep Blue"))
                     .frame(width: 30, height: 30)
                 Text(String(day))
                     .foregroundColor(.white)

@@ -31,8 +31,6 @@ class User {
         
     }
     
-    
-    
 }
 
 extension Date {

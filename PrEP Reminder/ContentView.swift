@@ -14,6 +14,7 @@ struct ContentView: View {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
+                        .foregroundColor(Color("Prep Purple"))
                 }
             SettingsView()
                 .tabItem {
