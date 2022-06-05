@@ -9,9 +9,59 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var user = User()
+    var user: User
     
-    @State var timeRemaining = 20
+    
+    @State var date = Date()
+    var updateTimer: Timer {
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+            self.date = Date()
+        })
+    }
+    
+    var timeRemaining: Int {
+        let cal = Calendar.current
+        let components = cal.dateComponents([.second], from: date, to: user.reminderTime)
+        let diff = components.second!
+        return diff
+    }
+    
+    var timeString: String {
+        
+        var hours: Int = Int(floor(Double(timeRemaining / 3600)))
+        
+        var minutes = Int(floor(Double(timeRemaining / 60)))
+        
+        if hours == 0 {
+            
+            if minutes == 0 {
+                if timeRemaining == 1 {
+                    return "\(String(timeRemaining)) Second"
+                } else {
+                    return "\(String(timeRemaining)) Seconds"
+                }
+                
+            } else {
+                if minutes == 1 {
+                    return "\(String(minutes)) Minute"
+                } else {
+                    return "\(String(minutes)) Minutes"
+                }
+                
+            }
+            
+        } else {
+            if hours == 1 {
+                return "\(String(hours)) Hour"
+            } else {
+                return "\(String(hours)) Hours"
+            }
+            
+        }
+        
+    }
+    
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     let notify = NotificationHandler()
@@ -47,9 +97,6 @@ struct HomeView: View {
                 }
                 .padding(.vertical, 50)
 
-
-                
-
                 Button(action: {
                     
                     if timeRemaining == 0 {
@@ -65,9 +112,6 @@ struct HomeView: View {
                         
                         user.daysTaken.append(currentDay)
                     }
-                    
-                    notify.sendNotification(date: Date(), type: "time", timeInterval: 2, title: "PrEP Alert", body: "Remember to take your PrEP Medication!")
-                    
                    
                     
                 }, label: {
@@ -80,7 +124,7 @@ struct HomeView: View {
                             .cornerRadius(30)
                             .foregroundColor(Color("Prep Blue"))
                             .shadow(radius: 5)
-                        Text(timeRemaining == 0 ? "Log" : String(timeRemaining))
+                        Text(timeRemaining == 0 ? "Log" : timeString)
                             .font(.system(size: 25, weight: .bold))
                             .foregroundColor(.white)
                     }
@@ -92,10 +136,9 @@ struct HomeView: View {
 
             }
         }
+        .onAppear(perform: {let _ = self.updateTimer})
         .onReceive(timer) { time in
-            if timeRemaining > 0 {
-                timeRemaining -= 1
-            } else {
+            if !(timeRemaining > 0) {
                 notify.sendNotification(date: Date(), type: "time", timeInterval: 2, title: "PrEP Alert", body: "Remember to take your PrEP Medication!")
             }
         }
@@ -104,6 +147,6 @@ struct HomeView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(user: User())
     }
 }

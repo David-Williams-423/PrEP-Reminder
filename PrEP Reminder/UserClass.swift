@@ -19,8 +19,11 @@ class User: ObservableObject {
     
     init() {
         self.startDate = .now.startOfDay
-        self.reminderTime = .now
+        self.reminderTime = .now.addingTimeInterval(100)
+        
     }
+    
+    
     
 //    func logDate(date: Date) -> Bool {
 //

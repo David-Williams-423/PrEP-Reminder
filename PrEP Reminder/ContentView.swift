@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var user = User()
+    
     var body: some View {
 
         TabView {
-            HomeView()
+            HomeView(user: user)
                 .tabItem {
                     Label("Home", systemImage: "house")
                         .foregroundColor(Color("Prep Purple"))
@@ -22,7 +25,7 @@ struct ContentView: View {
                         systemImage: "magnifyingglass")
                     
                 }
-            SettingsView()
+            SettingsView(user: user)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
@@ -32,6 +35,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(user: User())
     }
 }
