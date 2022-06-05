@@ -23,6 +23,11 @@ struct HomeView: View {
         let cal = Calendar.current
         let components = cal.dateComponents([.second], from: date, to: user.reminderTime)
         let diff = components.second!
+        
+        if diff <= 0 {
+            return 0
+        }
+        
         return diff
     }
     
@@ -111,6 +116,8 @@ struct HomeView: View {
                         }
                         
                         user.daysTaken.append(currentDay)
+                        
+                        user.reminderTime =  user.reminderTime.advanced(by: 60 * 60 * 24)
                     }
                    
                     
