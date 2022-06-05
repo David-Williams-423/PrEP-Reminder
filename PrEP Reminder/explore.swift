@@ -17,7 +17,7 @@ struct explore: View {
                      destination: URL(string: "https://www.cdc.gov/hiv/basics/prep/prep-decision.html")!);
                 Link("How you can pay for PrEP",
                      destination: URL(string: "https://www.cdc.gov/hiv/basics/prep/paying-for-prep/index.html")!);
-                Link("How you Take PrEP",
+                Link("How you should Take PrEP",
                      destination: URL(string: "https://www.cdc.gov/hiv/basics/prep/about-prep.html")!);
                 Link("Effectiveness of PrEP",
                      destination: URL(string: "https://www.cdc.gov/hiv/basics/prep/prep-effectiveness.html")!);

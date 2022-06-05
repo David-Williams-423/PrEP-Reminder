@@ -23,6 +23,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Explore",
                         systemImage: "magnifyingglass")
+                    
                 }
         }
     }
