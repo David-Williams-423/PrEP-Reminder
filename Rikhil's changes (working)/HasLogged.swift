@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-var hasLogged: Bool = false
+public var hasLogged = false
 
 struct HasLogged {
     
     
     func logger() -> Bool {
+        if 
         hasLogged = true
         return hasLogged
     }

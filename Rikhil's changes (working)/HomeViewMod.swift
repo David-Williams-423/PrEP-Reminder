@@ -35,16 +35,17 @@ struct HomeViewMod: View {
 
                 Spacer()
 
-                ZStack {
-                    Rectangle()
-                        .frame(width: 250, height: 75)
-                        .cornerRadius(20)
-                        .foregroundColor(.green)
-                    Text("Log")
-                        .font(.system(size: 25, weight: .bold))
-                        .foregroundColor(.white)
-                }
-                .padding(.bottom)
+//                ZStack {
+//                    
+//                    Rectangle()
+//                        .frame(width: 250, height: 75)
+//                        .cornerRadius(20)
+//                        .foregroundColor(.green)
+//                    Text("Log")
+//                        .font(.system(size: 25, weight: .bold))
+//                        .foregroundColor(.white)
+//                }
+//                .padding(.bottom)
 
             }
         }

@@ -12,7 +12,7 @@
 		2DB087E3284BD7A6001E2662 /* HomeViewMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E2284BD7A6001E2662 /* HomeViewMod.swift */; };
 		2DB087E5284BDD58001E2662 /* HasLogged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E4284BDD58001E2662 /* HasLogged.swift */; };
 		2DB087E7284BE3DB001E2662 /* CalendarFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087E6284BE3DB001E2662 /* CalendarFunctions.swift */; };
-		2DB087EB284C5009001E2662 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB087EA284C5009001E2662 /* HistoryView.swift */; };
+		2DF914C6284C62E6009EB928 /* ButtonFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF914C5284C62E6009EB928 /* ButtonFunction.swift */; };
 		38C6A720284B903500FC3443 /* PrEP_ReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A71F284B903500FC3443 /* PrEP_ReminderApp.swift */; };
 		38C6A722284B903500FC3443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C6A721284B903500FC3443 /* ContentView.swift */; };
 		38C6A724284B903700FC3443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C6A723284B903700FC3443 /* Assets.xcassets */; };
@@ -49,7 +49,7 @@
 		2DB087E4284BDD58001E2662 /* HasLogged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasLogged.swift; sourceTree = "<group>"; };
 		2DB087E6284BE3DB001E2662 /* CalendarFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarFunctions.swift; path = "Rikhil's changes (working)/CalendarFunctions.swift"; sourceTree = SOURCE_ROOT; };
 		2DB087E8284C4AC2001E2662 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		2DB087EA284C5009001E2662 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		2DF914C5284C62E6009EB928 /* ButtonFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFunction.swift; sourceTree = "<group>"; };
 		38C6A71C284B903500FC3443 /* PrEP Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PrEP Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38C6A71F284B903500FC3443 /* PrEP_ReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrEP_ReminderApp.swift; sourceTree = "<group>"; };
 		38C6A721284B903500FC3443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				2DB087E2284BD7A6001E2662 /* HomeViewMod.swift */,
 				2DB087DC284BB368001E2662 /* Calendar */,
 				2DB087E4284BDD58001E2662 /* HasLogged.swift */,
-				2DB087EA284C5009001E2662 /* HistoryView.swift */,
+				2DF914C5284C62E6009EB928 /* ButtonFunction.swift */,
 			);
 			path = "Rikhil's changes (working)";
 			sourceTree = "<group>";
@@ -302,12 +302,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF914C6284C62E6009EB928 /* ButtonFunction.swift in Sources */,
 				38C6A74E284BB50900FC3443 /* UserClass.swift in Sources */,
 				2DB087E5284BDD58001E2662 /* HasLogged.swift in Sources */,
 				2DB087E3284BD7A6001E2662 /* HomeViewMod.swift in Sources */,
 				2DB087DE284BB38D001E2662 /* CalendarView.swift in Sources */,
 				2DB087E1284BD791001E2662 /* ContentViewMod.swift in Sources */,
-				2DB087EB284C5009001E2662 /* HistoryView.swift in Sources */,
 				2DB087E7284BE3DB001E2662 /* CalendarFunctions.swift in Sources */,
 				38C6A722284B903500FC3443 /* ContentView.swift in Sources */,
 				38C6A720284B903500FC3443 /* PrEP_ReminderApp.swift in Sources */,

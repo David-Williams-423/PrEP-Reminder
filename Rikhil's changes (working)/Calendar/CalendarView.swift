@@ -40,8 +40,21 @@ struct CalendarView: View {
                 Text("")
             })
               .datePickerStyle(.graphical)
+            
+            
+            ZStack {
+                Button("Log") {
+                    let action: buttonClick = buttonClick()
+                    action.log(date: vm)
+            }
+                .font(.system(size: 25, weight: .bold))
+                .frame(width: 250, height: 75, alignment: .center)
+                .cornerRadius(20)
+                .background(Color.green)
+            }
+            }
               }
-        }
+      
        
 }
         
