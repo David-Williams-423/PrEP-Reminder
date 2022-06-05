@@ -6,48 +6,47 @@
 //
 
 import SwiftUI
+import Foundation
 
 
-var currentDate: Date = .now
 
+class CalendarViewModel: ObservableObject {
+    @Published var selectedDate: Date
+    init(selectedDate: Date) {
+        self.selectedDate = selectedDate
+    }
+    
+}
 
 struct CalendarView: View {
     
-    @State public var selectedDate: Date = .now
+    @ObservedObject var vm = CalendarViewModel(selectedDate: .now)
     
     public var body: some View {
         
-        
         VStack {
+            let checker: todayCheck = todayCheck()
             
-            Text(selectedDate, style: .date)
-                .font(.largeTitle)
-            if hasLogged {
-                Text("PrEP taken!")
-                    .fontWeight(.bold)
-            } else {
-                Text("PrEP not taken.")
-                    .fontWeight(.bold)
+            if checker.isItToday(object: vm) {
+                Text(vm.selectedDate, style: .date)
+                    .font(.largeTitle)
             }
-            let date: DatePicker = DatePicker(selection: $selectedDate, displayedComponents: [.date], label: {
+                
+       
+            let msg: message = message()
+            Text(msg.messageGenerator(calendar: vm))
+            DatePicker(selection: $vm.selectedDate, displayedComponents: [.date], label: {
                 Text("")
             })
-              date.datePickerStyle(.graphical)
-            
-            
-            
+              .datePickerStyle(.graphical)
+              }
         }
+       
+}
         
-    }
-}
+    struct CalendarView_Previews: PreviewProvider {
+        static var previews: some View {
+            CalendarView()
+        }
 
-class Dates {
-    
-}
-
-
-struct CalendarView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalendarView()
-    }
 }
