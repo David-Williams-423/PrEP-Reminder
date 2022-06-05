@@ -11,10 +11,9 @@ struct CustomCalendarView: View {
     
     @ObservedObject var user = User()
     
-    @State var selectedDate: Int = 1
-    
     let data = Array(-2...30).map { "\($0)" }
-    let layout = [ GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()) ]
+    let layout = [
+        GridItem(.flexible(minimum: 40)), GridItem(.flexible(minimum: 40)), GridItem(.flexible(minimum: 40)), GridItem(.flexible(minimum: 40)), GridItem(.flexible(minimum: 40)), GridItem(.flexible(minimum: 40)), GridItem(.flexible(minimum: 40)), ]
     
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]
     
@@ -38,13 +37,14 @@ struct CustomCalendarView: View {
                 }
             }
             
+            
             LazyVGrid(columns: layout, spacing: 30) {
                 ForEach(data, id: \.self) { item in
                     
                     Button(action: {
-                        selectedDate = Int(item)!
+                        user.selectedDate = Int(item)!
                     }, label: {
-                        formatDate(day: Int(item)!)
+                        formatDate(selectedDate: user.selectedDate, day: Int(item)!)
                             .foregroundColor(.black)
                     })
                     
@@ -59,11 +59,15 @@ struct CustomCalendarView: View {
 
 struct formatDate: View {
     
+    var selectedDate: Int
+    
     var day: Int
     
     var highlightedDates: [Int] = [2, 3, 4, 5]
     
     var currentDay = 5
+    
+   // var selection
     
     var body: some View {
         if day < 1 {
@@ -71,6 +75,18 @@ struct formatDate: View {
                 .foregroundColor(.gray)
                 
         }
+        else if selectedDate == day {
+            ZStack {
+                Circle()
+                    
+                    .foregroundColor(Color("Prep Purple"))
+                    .frame(width: 30, height: 30)
+                    
+                Text(String(day))
+                    .fontWeight(.medium)
+            }
+        }
+            
         
         else if day == currentDay && !highlightedDates.contains(day) {
             ZStack {

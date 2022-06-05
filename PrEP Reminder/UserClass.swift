@@ -13,6 +13,8 @@ class User: ObservableObject {
     @Published var daysTaken: [Date] = []
     var daysMissed: [Date] = []
     
+    @Published var selectedDate: Int = 1
+    
     var reminderTime: Date
     
     init() {
