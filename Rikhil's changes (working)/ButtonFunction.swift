@@ -23,8 +23,10 @@ struct buttonClick {
         let dateString: String = String(date.selectedDate.description.dropLast(15))
         if (logged.contains(dateString)) == false {
             logged.append(dateString)
-            hasLogged = true
-//            x = Text(msg.messageGenerator(calendar: date))
+//            let checker: HasLogged = HasLogged()
+//            if checker.logger(date: date.selectedDate){
+//                x = msg.messageGenerator(calendar: date)
+//            }
             //streakCounter(date: dateString)
         }
     }

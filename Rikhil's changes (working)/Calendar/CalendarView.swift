@@ -20,10 +20,11 @@ public class CalendarViewModel: ObservableObject {
 
 public let msg: message = message()
 
+
 struct CalendarView: View {
     
     @ObservedObject var vm = CalendarViewModel(selectedDate: .now)
-    
+    //var x: String = ""
     public var body: some View {
         
         VStack {
@@ -35,7 +36,7 @@ struct CalendarView: View {
             }
                 
        
-        //    var x = Text(msg.messageGenerator(calendar: vm))
+            //var x = Text(msg.messageGenerator(calendar: vm))
             var x = msg.messageGenerator(calendar: vm)
             Text(x)
                 .font(.headline)

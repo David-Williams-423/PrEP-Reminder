@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
-//public var currentDate: Date = .now
-//public var logCheck: HasLogged = HasLogged()
+//var currentDate: Date = .now
+//var logCheck: HasLogged = HasLogged()
 //public var hasLogged = logCheck.logger(date: currentDate)
-public var hasLogged = false
+//public var hasLogged = false
 
 public struct HasLogged {
-    
+
     
     func logger(date: Date) -> Bool {
+        var hasLogged: Bool
         let dateString: String = String(date.description.dropLast(15))
         if logged .contains(dateString) {
             hasLogged = true

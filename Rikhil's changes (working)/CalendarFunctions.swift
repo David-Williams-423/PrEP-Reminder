@@ -47,4 +47,8 @@ public struct message {
         }
         return (text)
     }
+    
 }
+
+
+
