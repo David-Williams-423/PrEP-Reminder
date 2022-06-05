@@ -24,28 +24,43 @@ struct HomeView: View {
 
                 Spacer()
 
-                VStack(spacing: 15) {
-                    Text("Streak: 40")
+                VStack(spacing: 5) {
+                    Text("Streak: 40 Days")
                         .font(.system(size: 40))
-
-                    Image(systemName: "calendar")
-                        .resizable()
-                        .frame(width: 300, height: 300)
+                        .fontWeight(.medium)
+                        
+                    
+                    HStack(spacing: 15) {
+                        Image(systemName: "flame.fill")
+                        Image(systemName: "flame.fill")
+                        Image(systemName: "flame.fill")
+                        Image(systemName: "flame")
+                        Image(systemName: "flame")
+                        Image(systemName: "flame")
+                        Image(systemName: "flame")
+                    }.foregroundColor(.orange)
+                        .font(.system(size: 40))
+                        
+                    CustomCalendarView()
+                        
                 }
 
 
-                Spacer()
+                
 
                 ZStack {
                     Rectangle()
                         .frame(width: 250, height: 75)
-                        .cornerRadius(20)
+                        .cornerRadius(30)
                         .foregroundColor(.green)
+                        .shadow(radius: 5)
                     Text("Log")
                         .font(.system(size: 25, weight: .bold))
                         .foregroundColor(.white)
                 }
-                .padding(.bottom)
+                .padding(.top)
+                
+                Spacer()
 
             }
         }

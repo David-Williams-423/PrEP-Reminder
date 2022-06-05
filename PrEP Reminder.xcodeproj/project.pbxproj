@@ -108,7 +108,7 @@
 				38C6A74B284B99FA00FC3443 /* SettingsView.swift */,
 				38C6A74D284BB50900FC3443 /* UserClass.swift */,
 				38C6A723284B903700FC3443 /* Assets.xcassets */,
-				38EF30FD284C3CFA003EFBC9 /* CustomCalendarView.swift */,
+				38EF30FF284C4172003EFBC9 /* Calendar */,
 				38C6A725284B903700FC3443 /* Preview Content */,
 			);
 			path = "PrEP Reminder";
@@ -137,6 +137,14 @@
 				38C6A73C284B903700FC3443 /* PrEP_ReminderUITestsLaunchTests.swift */,
 			);
 			path = "PrEP ReminderUITests";
+			sourceTree = "<group>";
+		};
+		38EF30FF284C4172003EFBC9 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				38EF30FD284C3CFA003EFBC9 /* CustomCalendarView.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
