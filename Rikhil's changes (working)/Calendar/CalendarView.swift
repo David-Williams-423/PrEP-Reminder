@@ -10,13 +10,15 @@ import Foundation
 
 
 
-class CalendarViewModel: ObservableObject {
+public class CalendarViewModel: ObservableObject {
     @Published var selectedDate: Date
     init(selectedDate: Date) {
         self.selectedDate = selectedDate
     }
     
 }
+
+public let msg: message = message()
 
 struct CalendarView: View {
     
@@ -33,8 +35,9 @@ struct CalendarView: View {
             }
                 
        
-            let msg: message = message()
-            Text(msg.messageGenerator(calendar: vm))
+        //    var x = Text(msg.messageGenerator(calendar: vm))
+            var x = msg.messageGenerator(calendar: vm)
+            Text(x)
                 .font(.headline)
             DatePicker(selection: $vm.selectedDate, displayedComponents: [.date], label: {
                 Text("")
@@ -44,8 +47,11 @@ struct CalendarView: View {
             
             ZStack {
                 Button("Log") {
+                    x = (msg.messageGenerator(calendar: vm))
                     let action: buttonClick = buttonClick()
                     action.log(date: vm)
+                    x = (msg.messageGenerator(calendar: vm))
+
             }
                 .font(.system(size: 25, weight: .bold))
                 .frame(width: 250, height: 75, alignment: .center)

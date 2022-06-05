@@ -24,6 +24,7 @@ struct buttonClick {
         if (logged.contains(dateString)) == false {
             logged.append(dateString)
             hasLogged = true
+//            x = Text(msg.messageGenerator(calendar: date))
             //streakCounter(date: dateString)
         }
     }

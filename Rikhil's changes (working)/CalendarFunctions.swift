@@ -27,18 +27,19 @@ struct todayCheck {
     }
 }
 
-struct message {
+public struct message {
     func messageGenerator(calendar: CalendarViewModel) -> String {
+        let logCheck: HasLogged = HasLogged()
         var text: String
         let checker: todayCheck = todayCheck()
         if checker.isItToday(object: calendar) {
-            if hasLogged {
+            if logCheck.logger(date: calendar.selectedDate) {
                 text = ("PrEP taken!")
             } else {
                 text = ("PrEP not taken yet today.")
             }
         } else {
-            if hasLogged {
+            if logCheck.logger(date: calendar.selectedDate) {
                text = ("PrEP was taken!")
             } else {
                 text = ("PrEP not taken")
