@@ -10,28 +10,28 @@ import Foundation
 
 // functions used to determine if the current date is selected and which message to show
 
-public var today: Bool = true
+public var today2: Bool = true
 
-struct todayCheck {
+struct todayCheck2 {
 
     func isItToday(object: CalendarViewModel) -> Bool {
     
         let currentDate: Date = .now
         if currentDate.description.dropLast(15) == object.selectedDate.description.dropLast(15) {
-        today = true
+        today2 = true
     } else {
-        today = false
+        today2 = false
     }
         
-    return today
+    return today2
     }
 }
 
-public struct message {
+public struct message2 {
     func messageGenerator(calendar: CalendarViewModel) -> String {
         let logCheck: HasLogged = HasLogged()
         var text: String
-        let checker: todayCheck = todayCheck()
+        let checker: todayCheck2 = todayCheck2()
         if checker.isItToday(object: calendar) {
             if logCheck.logger(date: calendar.selectedDate) {
                 text = ("PrEP taken!")

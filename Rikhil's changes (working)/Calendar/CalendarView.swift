@@ -18,7 +18,7 @@ public class CalendarViewModel: ObservableObject {
     
 }
 
-public let msg: message = message()
+public let msg: message2 = message2()
 
 
 struct CalendarView: View {
@@ -28,7 +28,7 @@ struct CalendarView: View {
     public var body: some View {
         
         VStack {
-            let checker: todayCheck = todayCheck()
+            let checker: todayCheck2 = todayCheck2()
             
             if checker.isItToday(object: vm) == false {
                 Text(vm.selectedDate, style: .date)
