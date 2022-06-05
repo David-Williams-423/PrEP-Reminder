@@ -9,7 +9,11 @@ import SwiftUI
 
 struct CustomCalendarView: View {
     
-    let data = Array(-2...31).map { "\($0)" }
+    @ObservedObject var user = User()
+    
+    @State var selectedDate: Int = 1
+    
+    let data = Array(-2...30).map { "\($0)" }
     let layout = [ GridItem(.flexible()), GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()),GridItem(.flexible()) ]
     
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]
@@ -19,6 +23,7 @@ struct CustomCalendarView: View {
         
         
         VStack {
+            
             Text("June 2022")
                 .font(.title)
                 .fontWeight(.bold)
@@ -35,7 +40,14 @@ struct CustomCalendarView: View {
             
             LazyVGrid(columns: layout, spacing: 30) {
                 ForEach(data, id: \.self) { item in
-                    formatDate(day: Int(item)!)
+                    
+                    Button(action: {
+                        selectedDate = Int(item)!
+                    }, label: {
+                        formatDate(day: Int(item)!)
+                            .foregroundColor(.black)
+                    })
+                    
                 
                 }
             }

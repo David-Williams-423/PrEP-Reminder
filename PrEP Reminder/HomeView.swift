@@ -29,16 +29,18 @@ struct HomeView: View {
                         
                     CustomCalendarView()
                     
-                    HStack(spacing: 4) {
-                        Image(systemName: "heart.fill")
-                        Image(systemName: "heart.fill")
-                        Image(systemName: "heart.fill")
-                        Image(systemName: "heart")
-                        Image(systemName: "heart")
-                        Image(systemName: "heart")
-                        Image(systemName: "heart")
-                    }.foregroundColor(Color("Prep Purple"))
-                        .font(.system(size: 40))
+                    Text("Streak")
+                    
+//                    HStack(spacing: 4) {
+//                        Image(systemName: "heart.fill")
+//                        Image(systemName: "heart.fill")
+//                        Image(systemName: "heart.fill")
+//                        Image(systemName: "heart")
+//                        Image(systemName: "heart")
+//                        Image(systemName: "heart")
+//                        Image(systemName: "heart")
+//                    }.foregroundColor(Color("Prep Purple"))
+//                        .font(.system(size: 40))
                         
                 }
                 .padding(.vertical, 50)

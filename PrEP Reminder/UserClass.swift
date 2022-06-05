@@ -7,10 +7,10 @@
 
 import Foundation
 
-class User {
+class User: ObservableObject {
     
     var startDate: Date
-    var daysTaken: [Date] = []
+    @Published var daysTaken: [Date] = []
     var daysMissed: [Date] = []
     
     var reminderTime: Date
