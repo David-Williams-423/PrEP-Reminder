@@ -19,6 +19,11 @@ struct ContentView: View {
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+            explore()
+                .tabItem {
+                    Label("Explore",
+                        systemImage: "magnifyingglass")
+                }
         }
     }
 }
