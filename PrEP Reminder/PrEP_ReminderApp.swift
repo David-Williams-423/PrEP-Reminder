@@ -15,3 +15,22 @@ struct PrEP_ReminderApp: App {
         }
     }
 }
+
+
+//class CalendarViewModel: ObservableObject {
+//
+//    @Published var selectedDate: Date
+//
+//    init(selectedDate: Date) {
+//
+//        self.selectedDate = selectedDate
+//
+//    }
+//
+//}
+//
+////Then in CalenderView...
+//
+//@ObservedObject var vm = CalendarViewModel(selectedDate: .now)
+//
+////Then use $vm.selectedDate in date picker

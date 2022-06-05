@@ -11,6 +11,7 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             VStack {
+                
                 HStack {
                     Text("Saturday, June 4")
                         .font(.system(size: 40, weight: .bold))
