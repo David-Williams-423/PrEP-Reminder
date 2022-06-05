@@ -84,6 +84,7 @@ struct formatDate: View {
                     
                 Text(String(day))
                     .fontWeight(.medium)
+                    .foregroundColor(.white)
             }
         }
             
