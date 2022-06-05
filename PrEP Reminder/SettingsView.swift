@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var selectedDate = Date()
+    let notify = NotificationHandler()
     var body: some View {
+        VStack(spacing: 20) {
+        Text("Settings")
+            
         List {
-            Text("Settings")
-            Text("Settings")
-            Text("Settings")
-            Text("Settings")
-            Text("Settings")
-            Text("Settings")
+            Text("Pick Time to be Notified at")
+            DatePicker("Notify me at:", selection:$selectedDate, displayedComponents: .hourAndMinute)
+                .labelsHidden()
+            }
+            
+            
+            
+            Button("Enable Post Notifications") {
+                notify.askPermission()
+            }
         }
     }
 }

@@ -10,10 +10,10 @@ import Foundation
 class User: ObservableObject {
     
     var startDate: Date
-    @Published var daysTaken: [Date] = []
+    @Published var daysTaken: [Int] = [1, 2, 3, 4]
     var daysMissed: [Date] = []
     
-    @Published var selectedDate: Int = 1
+    @Published var selectedDate: Int = 15
     
     var reminderTime: Date
     
@@ -22,16 +22,16 @@ class User: ObservableObject {
         self.reminderTime = .now
     }
     
-    func logDate(date: Date) -> Bool {
-        
-        if !daysTaken.contains(date.startOfDay) {
-            daysTaken.append(date)
-            return true
-        }
-        
-        return false
-        
-    }
+//    func logDate(date: Date) -> Bool {
+//
+//        if !daysTaken.contains(date.startOfDay) {
+//            daysTaken.append(date)
+//            return true
+//        }
+//
+//        return false
+//
+//    }
     
 }
 

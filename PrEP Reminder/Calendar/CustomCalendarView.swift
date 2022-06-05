@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CustomCalendarView: View {
     
-    @ObservedObject var user = User()
+    var user: User
+    
+    
     
     let data = Array(-2...30).map { "\($0)" }
     let layout = [
@@ -44,7 +46,7 @@ struct CustomCalendarView: View {
                     Button(action: {
                         user.selectedDate = Int(item)!
                     }, label: {
-                        formatDate(selectedDate: user.selectedDate, day: Int(item)!)
+                        formatDate(selectedDate: user.selectedDate, day: Int(item)!, dates: user.daysTaken)
                             .foregroundColor(.black)
                     })
                     
@@ -63,9 +65,19 @@ struct formatDate: View {
     
     var day: Int
     
-    var highlightedDates: [Int] = [2, 3, 4, 5]
     
-    var currentDay = 5
+    
+    var dates: [Int]
+    
+    var currentDay: Int {
+        
+        let date = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: date)
+        return components.day!
+        
+        
+    }
     
    // var selection
     
@@ -89,7 +101,7 @@ struct formatDate: View {
         }
             
         
-        else if day == currentDay && !highlightedDates.contains(day) {
+        else if day == currentDay && !dates.contains(day) {
             ZStack {
                 Circle()
                     .strokeBorder(lineWidth: 3)
@@ -102,7 +114,7 @@ struct formatDate: View {
             }
         }
 
-        else if highlightedDates.contains(day)  {
+        else if dates.contains(day)  {
             ZStack {
                 Circle()
                     .foregroundColor(Color("Prep Blue"))
@@ -124,6 +136,6 @@ struct formatDate: View {
 
 struct CustomCalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomCalendarView()
+        CustomCalendarView(user: User())
     }
 }
